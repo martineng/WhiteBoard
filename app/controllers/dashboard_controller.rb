@@ -1,10 +1,10 @@
 class DashboardController < ApplicationController
-  before_action :authenticate_user!, only: [:home]
+  before_action :authenticate_user!, only: [:index, :subs]
 
   def index
   end
 
-  def show
+  def subs
   end
 
 end
