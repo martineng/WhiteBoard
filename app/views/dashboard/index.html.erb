@@ -18,7 +18,7 @@
   <% end %>
         <div class="col-sm-4">
           <div class="panel panel-primary">
-            <div class="panel-heading"><%= the_course.course_name %></div>
+            <div class="panel-heading"><%= the_course.course_name %> <%= the_course.subjects.first.subject_name%></div>
             <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
             <div class="panel-footer">
               <p><%= the_course.course_code %></p>
