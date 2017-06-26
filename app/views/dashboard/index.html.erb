@@ -18,13 +18,13 @@
   <% end %>
         <div class="col-sm-4">
           <div class="panel panel-primary">
-            <div class="panel-heading"><%= the_course.course_name %> <%= the_course.subjects.first.subject_name%></div>
+            <div class="panel-heading"><%= the_course.course_name %></div>
             <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
             <div class="panel-footer">
               <p><%= the_course.course_code %></p>
               <p><%= the_course.description %></p>
             </div>
-            <p class="btn btn-primary"><%= link_to 'View', dashboard_index_path %></p>
+            <p class="btn btn-primary"><%= link_to 'View', dashsub_index_path(:cid => the_course.id) %></p>
           </div>
         </div>
 
