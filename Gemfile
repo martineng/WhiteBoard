@@ -5,9 +5,21 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# For user authentication
 gem 'devise'
+# css framework
 gem 'bootstrap-sass'
+# for use by the dropdown layout from bootstrap
 gem 'jquery-turbolinks'
+
+
+# To optimize query request
+gem 'bullet'
+# To check for unused or unreachable route
+gem 'traceroute'
+# rails application optimizer
+gem 'rails_best_practices'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
