@@ -15,8 +15,6 @@ gem 'jquery-turbolinks'
 
 # To optimize query request
 gem 'bullet'
-# To check for unused or unreachable route
-gem 'traceroute'
 # rails application optimizer
 gem 'rails_best_practices'
 
