@@ -25,3 +25,5 @@ test:
 
 production:
   <<: *default
+  port: 3306
+  timeout: 5000
