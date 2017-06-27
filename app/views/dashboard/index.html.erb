@@ -10,9 +10,15 @@
   <% end %>
 </div><br><br>
 
+<!--To generated current logged in user's enrolled courses-->
 <% current_user.courses.each_with_index do |the_course, index| %>
-
+<!--My layout is 3 panel in a row-->
+<!--the index of the loop start with 0-->
+<!--First row will be 0-1-2, second 3-4,5 -->
+<!--Hence by doing (index+1) made a perfect 3-3 row panels-->
   <% if (index+1) % 3 == 0 || index+1 == 1 %>
+  <!--So this tag generate when it is the begining of the row and-->
+  <!--the end of row-->
     <div class="container">
       <div class="row">
   <% end %>
@@ -24,10 +30,14 @@
               <p><%= the_course.course_code %></p>
               <p><%= the_course.description %></p>
             </div>
+            <!--if button clicked, pass the course id to the next page-->
+            <!--to generate subject view (in dashsub )-->
             <p class="btn btn-primary"><%= link_to 'View', dashsub_index_path(:cid => the_course.id) %></p>
           </div>
         </div>
-
+<!--Similar to the opening, close it when it is the end of row-->
+<!--or when it is the end of the list of the loop-->
+<!--minus 1 is because .count start at 1-->
   <% if index == (current_user.courses.count -1) || (index +1 )%3 == 0%>
       </div>
     </div>

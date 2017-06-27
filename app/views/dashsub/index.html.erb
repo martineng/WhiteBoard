@@ -1,24 +1,30 @@
+<!--This view is for subjects bases on selected course-->
 <h1>Subjects <%= link_to "Back", :back, class: 'btn btn-danger' %></h1>
 
-
-<% @cSubject.subjects.each_with_index do |cs, index| %>
-<% if (index+1) % 3 == 0 || index+1 == 1 %>
-  <div class="container">
-    <div class="row">
-<% end %>
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading"><%= cs.subject_name %></div>
-          <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">
-            <p><%= cs.subject_code %></p>
-            <p><%= cs.description %></p>
+  <% @cSubject.subjects.each_with_index do |cs, index| %>
+  <!--making the layout panel 3 in a row-->
+  <!--do loop start at 0, first row end at 2, second will be end at 5-->
+  <!--by verifying index with +1 make a perfect 3-3 row-->
+  <!--cause %3 of 3 will be 0-->
+  <!--also do the opening tag when it is the first panel-->
+  <% if (index+1) % 3 == 0 || index+1 == 1 %>
+    <div class="container">
+      <div class="row">
+  <% end %>
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><%= cs.subject_name %></div>
+            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">
+              <p><%= cs.subject_code %></p>
+              <p><%= cs.description %></p>
+            </div>
           </div>
         </div>
+  <!--Simply similar to the opening-->
+  <!--except .count-1 'cause it start counting from 1-->
+  <% if index == (current_user.courses.count -1) || (index +1 )%3 == 0%>
       </div>
-
-<% if index == (current_user.courses.count -1) || (index +1 )%3 == 0%>
     </div>
-  </div>
-<% end %>
+  <% end %>
 <% end %>

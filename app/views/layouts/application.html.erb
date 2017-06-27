@@ -19,13 +19,14 @@
         <div class="navbar">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Home', root_path %></li>
-
+            <!--if user signed in, allow display of dashboard-->
             <% if user_signed_in? %>
               <li><%= link_to 'Dashboard', dashboard_index_path %></li>
             <% end %>
           </ul>
 
           <ul class="nav navbar-nav pull-right">
+            <!--if user signed in, genearte dropdown in the nav bar-->
             <% if user_signed_in? %>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
