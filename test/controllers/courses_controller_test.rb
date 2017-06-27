@@ -45,4 +45,5 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to courses_url
   end
+
 end

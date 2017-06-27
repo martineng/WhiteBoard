@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  subject_name: MyString
-  subject_code: MyString
-  description: MyString
-  course: one
+subject_one:
+  subject_name: SubjectName01
+  subject_code: SubjectCode01
+  description: SubjectDescri01
+  course: 2
 
-two:
-  subject_name: MyString
-  subject_code: MyString
-  description: MyString
-  course: two
+subject_two:
+  subject_name: SubjectName02
+  subject_code: SubjectCode02
+  description: SubjectDescri02
+  course: 1

@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+#
+course_one:
+  id: 1
+  course_name: CourseName01
+  course_code: CourseCode01
+  stream: CourseStream01
+  description: CourseDescri01
 
-one:
-  course_name: MyString
-  course_code: MyString
-  stream: MyString
-  description: MyString
-
-two:
-  course_name: MyString
-  course_code: MyString
-  stream: MyString
-  description: MyString
+course_two:
+  id: 2
+  course_name: CourseName02
+  course_code: CourseCode02
+  stream: CourseStream02
+  description: CourseDescri02
