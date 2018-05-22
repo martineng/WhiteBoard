@@ -1,6 +1,6 @@
  # WhiteBoard
 
-![homepage](scr/homepage.png)
+![](/scr/homepage.PNG)
 
  This is a Rails web application prototype.
 
